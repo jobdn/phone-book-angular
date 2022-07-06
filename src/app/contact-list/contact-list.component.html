@@ -1,5 +1,8 @@
 <!-- *ngFor - it is directive -->
-<div class="contact" *ngFor="let contact of contacts">
-  <span class="contact__name">{{ contact.name }}</span>
-  <span class="contact__tel">{{ contact.phone }}</span>
+<div
+  class="flex align-center p-[20px] m-[20px] rounded-lg border border-[#ccc]"
+  *ngFor="let contact of contacts"
+>
+  <span class="font-bold mr-4">{{ contact.name }}</span>
+  <span>{{ contact.phone }}</span>
 </div>
