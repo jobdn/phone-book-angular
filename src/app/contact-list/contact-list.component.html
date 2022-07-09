@@ -1,8 +1,6 @@
 <!-- *ngFor - it is directive -->
-<div
-  class="flex align-center p-[20px] m-[20px] rounded-lg border border-[#ccc]"
-  *ngFor="let contact of contacts"
->
-  <span class="font-bold mr-4">{{ contact.name }}</span>
-  <span>{{ contact.phone }}</span>
-</div>
+
+<app-add-contact-form
+  (contactEventEmiter)="onAddContact($event)"
+></app-add-contact-form>
+<app-contact *ngFor="let contact of contacts" [contact]="contact"></app-contact>

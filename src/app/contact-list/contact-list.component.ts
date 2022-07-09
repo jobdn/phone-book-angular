@@ -11,4 +11,8 @@ export class ContactListComponent {
     { name: 'Danila', phone: '+7-908-459-82-99' },
     { name: 'Igor', phone: '+7-911-422-88-55' },
   ];
+
+  onAddContact(contact: Contact) {
+    this.contacts.push(contact);
+  }
 }
