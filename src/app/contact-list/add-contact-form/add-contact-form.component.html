@@ -17,7 +17,7 @@
       <input
         name="nameInput"
         type="text"
-        placeholder="Print name..."
+        placeholder="Type name..."
         class="py-3 px-2 border rounded-lg"
         [(ngModel)]="name"
         #nameInput="ngModel"
@@ -29,12 +29,12 @@
       <input
         name="phoneInput"
         type="tel"
-        placeholder="Type phone..."
+        placeholder="Type phone...."
         class="py-3 px-2 border rounded-lg"
         [(ngModel)]="phone"
         #phoneInput="ngModel"
         required
-        pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+        [imask]="{ mask: '+{7} (000) 000-00-00' }"
       />
     </div>
   </div>
