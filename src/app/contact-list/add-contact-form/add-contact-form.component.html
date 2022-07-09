@@ -33,8 +33,9 @@
         class="py-3 px-2 border rounded-lg"
         [(ngModel)]="phone"
         #phoneInput="ngModel"
-        required
         [imask]="{ mask: '+{7} (000) 000-00-00' }"
+        minlength="18"
+        required
       />
     </div>
   </div>
