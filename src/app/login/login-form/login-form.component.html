@@ -1,0 +1,23 @@
+<div class="flex justify-center w-full pt-[30px]">
+  <form class="flex flex-col items-center rounded-lg border px-3 py-2">
+    <h2 class="pb-[20px]">Please enter your phone</h2>
+    <div>
+      <label class="mr-2">Phone:</label>
+      <input
+        type="tel"
+        placeholder="Your phone..."
+        class="py-3 px-2 border rounded-lg"
+        [(ngModel)]="userPhone"
+        [imask]="{ mask: '+{7} (000) 000-00-00' }"
+        minlength="18"
+        required
+      />
+    </div>
+    <button
+      disabled="!userPhone"
+      class="px-8 py-3 m-3 rounded-lg bg-cyan-400 hover:scale-110 transition"
+    >
+      Log in
+    </button>
+  </form>
+</div>
